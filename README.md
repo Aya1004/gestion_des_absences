@@ -6,9 +6,9 @@ Ceci est le backend Node.js pour une application de gestion des absences, constr
 
 - Docker et Docker Compose
 
-## Lancement de l'Application (Full Stack)
+## Lancement de l'Application  
 
-L'application entière (Backend + Base de données) est conteneurisée. Vous n'avez pas besoin d'installer Node.js ou MongoDB localement pour la lancer.
+L'application entière  est conteneurisée. Vous n'avez pas besoin d'installer Node.js ou MongoDB localement pour la lancer.
 
 ### 1. Démarrer l'application
 
