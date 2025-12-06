@@ -21,7 +21,7 @@ docker-compose up --build
 Cette commande va :
 1. Construire l'image Docker de l'application.
 2. Lancer le conteneur MongoDB (sur le port 27018).
-3. Lancer le conteneur de l'application Backend (sur le port 5000).
+3. Lancer le conteneur de l'application Backend (sur le port 3000).
 
 Une fois lancée :
 - **API Backend** : Accessible sur `http://localhost:5000`
