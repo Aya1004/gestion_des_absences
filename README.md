@@ -24,7 +24,7 @@ Cette commande va :
 3. Lancer le conteneur de l'application Backend (sur le port 3000).
 
 Une fois lancée :
-- **API Backend** : Accessible sur `http://localhost:5000`
+- **API Backend** : Accessible sur `http://localhost:3000`
 - **Base de données** : Accessible sur `mongodb://localhost:27018`
 
 ### 2. Arrêter l'application
