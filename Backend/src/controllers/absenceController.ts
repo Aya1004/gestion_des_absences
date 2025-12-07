@@ -13,9 +13,21 @@ export const createAbsence = async (req: Request, res: Response): Promise<void> 
 
 export const getAbsences = async (req: Request, res: Response): Promise<void> => {
     try {
-        const absences = await Absence.find()
-            .populate('etudiant')
-            .populate('seance');
+        // Nouveau : filtrage par étudiant si query param etudiant fourni
+        const findQuery: any = {};
+        if (req.query.etudiant) {
+            findQuery.etudiant = req.query.etudiant;
+        }
+        const absences = await Absence.find(findQuery)
+            .populate({
+                path: 'seance',
+                populate: [
+                    { path: 'module', select: 'nom_module' },
+                    { path: 'classe', select: 'nom_classe niveau filiere' },
+                    { path: 'enseignant', select: 'nom prenom email' }
+                ]
+            })
+            .populate({ path: 'etudiant', select: 'nom prenom email' });
         res.status(200).json(absences);
     } catch (error) {
         res.status(500).json({ message: (error as Error).message });

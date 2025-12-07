@@ -2,13 +2,13 @@ version: '3.8'
 
 services:
   app:
-    build: .
+    build: ./Backend
     container_name: absence_backend
     ports:
       - "3000:3000"
     environment:
       - PORT=3000
-      - MONGO_URI=mongodb://mongo:27017/absence_management
+      - MONGO_URI=mongodb+srv://aassaf4516_db_user:sKcrByxKghJG3uOM@cluster0.hfy5fyw.mongodb.net/
     depends_on:
       - mongo
     restart: always
@@ -20,7 +20,7 @@ services:
     ports:
       - "27017:27017"
     volumes:
-      - C:/Users/yasse/Bureau/DB:/data/db
+      - C:/Users/hp/Desktop/DB:/data/db
     environment:
       MONGO_INITDB_DATABASE: absence_management
 

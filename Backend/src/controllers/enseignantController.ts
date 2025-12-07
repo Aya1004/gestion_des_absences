@@ -58,3 +58,35 @@ export const deleteEnseignant = async (req: Request, res: Response): Promise<voi
         res.status(500).json({ message: (error as Error).message });
     }
 };
+
+export const loginEnseignant = async (req: Request, res: Response): Promise<void> => {
+    try {
+        const { email, password } = req.body;
+        if (!email || !password) {
+            res.status(400).json({ message: 'Email et mot de passe requis' });
+            return;
+        }
+        const enseignant = await Enseignant.findOne({ email }).populate('classes');
+        if (!enseignant) {
+            res.status(401).json({ message: 'Email ou mot de passe incorrect' });
+            return;
+        }
+        if (enseignant.password !== password) {
+            res.status(401).json({ message: 'Email ou mot de passe incorrect' });
+            return;
+        }
+        res.status(200).json({ 
+            message: 'Connexion réussie',
+            enseignant: {
+                id: enseignant._id,
+                nom: enseignant.nom,
+                prenom: enseignant.prenom,
+                email: enseignant.email,
+                telephone: enseignant.telephone,
+                classes: enseignant.classes
+            }
+        });
+    } catch (error) {
+        res.status(500).json({ message: (error as Error).message });
+    }
+};

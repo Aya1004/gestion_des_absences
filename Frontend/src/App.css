@@ -1,0 +1,141 @@
+body, #root, html {
+  min-height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #1e1e2f, #2d2d2d);
+  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+  color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Container central */
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: rgba(45, 45, 45, 0.9);
+}
+
+/* Formulaire */
+.login-form {
+  background: rgba(60, 60, 60, 0.8);
+  backdrop-filter: blur(8px);
+  padding: 2.5rem;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 450px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-form:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.7);
+}
+
+.login-form h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #f0f0f0;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* Inputs */
+.login-form input,
+.login-form select {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #555;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  background: #3c3c3c;
+  color: #fff;
+  transition: all 0.2s;
+}
+
+.login-form input:focus,
+.login-form select:focus {
+  border-color: #646cff;
+  background: #444;
+  box-shadow: 0 0 8px rgba(100,108,255,0.4);
+  outline: none;
+}
+
+.login-form input::placeholder {
+  color: #aaa;
+}
+
+/* Boutons */
+.login-form button {
+  background: linear-gradient(135deg, #646cff, #5a5aff);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.85rem 0;
+  width: 100%;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: all 0.3s ease;
+}
+
+.login-form button:hover {
+  background: linear-gradient(135deg, #7c7cff, #6f6fff);
+  box-shadow: 0 4px 15px rgba(100,108,255,0.5);
+}
+
+/* Liens */
+.login-form .link-container a {
+  color: #aaa;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+  opacity: 0.85;
+}
+
+.login-form .link-container a:hover {
+  color: #646cff;
+  text-decoration: underline;
+  opacity: 1;
+}
+
+/* Messages */
+.login-form .message {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.login-form .message.success {
+  background: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.login-form .message.error {
+  background: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+/* Logo animé */
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  transition: transform 0.3s, filter 0.3s;
+}
+
+.logo:hover {
+  transform: rotate(10deg);
+  filter: drop-shadow(0 0 2em #646cffaa);
+}

@@ -10,7 +10,7 @@ export interface IJustification extends Document {
 
 const JustificationSchema: Schema = new Schema({
     absence: { type: mongoose.Schema.Types.ObjectId, ref: "Absence", required: [true, "L'absence est requise"] },
-    fichier: { type: String, required: [true, 'Le fichier est requis'] },
+    fichier: { type: String, default: '' },
     commentaire: { type: String },
     etat: { type: String, enum: ["en attente", "validé", "refusé"], default: "en attente" }
 });

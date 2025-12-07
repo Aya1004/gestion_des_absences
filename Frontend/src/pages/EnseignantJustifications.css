@@ -1,0 +1,185 @@
+/* EnseignantJustifications.css */
+
+/* Page globale */
+.enseignant-justifications-page {
+    min-height: 100vh;
+    background: #f5f7fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* Header */
+  .header {
+    background: #fff;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .header h1 {
+    margin: 0;
+    color: #1976d2;
+    font-size: 1.5rem;
+  }
+  
+  .btn-back {
+    padding: 0.5rem 1rem;
+    background: #1976d2;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .btn-back:hover {
+    background: #1565c0;
+  }
+  
+  /* Container principal */
+  .container {
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  
+  /* Message */
+  .message {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: 500;
+  }
+  
+  .message.success {
+    background: #e8f5e9;
+    color: #2e7d32;
+  }
+  
+  .message.error {
+    background: #ffebee;
+    color: #c62828;
+  }
+  
+  /* Card */
+  .card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+  }
+  
+  /* Table */
+  .table-wrapper {
+    overflow-x: auto;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  table th, table td {
+    padding: 0.75rem;
+    text-align: left;
+    color: #555;
+  }
+  
+  table th {
+    border-bottom: 2px solid #eee;
+  }
+  
+  table tr {
+    border-bottom: 1px solid #eee;
+  }
+  
+  /* Actions boutons */
+  .actions {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .btn-validate {
+    padding: 0.5rem 1rem;
+    background: #388e3c;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.875rem;
+    transition: background 0.3s;
+  }
+  
+  .btn-validate:hover {
+    background: #2e7d32;
+  }
+  
+  .btn-refuse {
+    padding: 0.5rem 1rem;
+    background: #d32f2f;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.875rem;
+    transition: background 0.3s;
+  }
+  
+  .btn-refuse:hover {
+    background: #c62828;
+  }
+  
+  /* État des justifications */
+  .etat {
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    display: inline-block;
+  }
+  
+  /* Couleurs par état */
+  .etat-valide {
+    background: #e8f5e9;
+    color: #2e7d32;
+  }
+  
+  .etat-refuse {
+    background: #ffebee;
+    color: #c62828;
+  }
+  
+  .etat-attente {
+    background: #fff3e0;
+    color: #f57c00;
+  }
+  
+  /* Loading */
+  .loading {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: #555;
+  }
+  
+  /* Aucun justificatif */
+  .no-justifications {
+    text-align: center;
+  }
+  
+  .no-justifications p {
+    color: #888;
+    margin: 0;
+  }
+  
+  .no-justifications .warning {
+    color: #f57c00;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+  }
+  
