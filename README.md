@@ -81,6 +81,49 @@ Le frontend sera accessible sur `http://localhost:5173`
 
 ## 📱 Utilisation
 
+### ⚠️ Configuration Initiale (Important)
+
+**Avant de créer des comptes utilisateurs, vous devez d'abord créer des classes et des modules via Postman ou un autre outil API.**
+
+#### 1. Créer des Classes
+
+Utilisez Postman pour créer des classes via l'API :
+
+```http
+POST http://localhost:3000/api/classes
+Content-Type: application/json
+
+{
+  "nom_classe": "L3 Info",
+  "niveau": "Licence 3",
+  "departement": "Informatique",
+  "filiere": "Informatique"
+}
+```
+
+#### 2. Créer des Modules
+
+Créez des modules via l'API :
+
+```http
+POST http://localhost:3000/api/modules
+Content-Type: application/json
+
+{
+  "nom_module": "Base de données",
+  "coefficient": 3
+}
+```
+
+**Pourquoi ?** 
+- Les étudiants doivent être assignés à une classe lors de l'inscription
+- Les séances nécessitent un module pour être créées
+- Les enseignants peuvent être assignés à des classes (optionnel)
+
+---
+
+### Utilisation de l'Application
+
 1. **Créer un compte** : Accédez à `/signup` pour créer un compte étudiant ou enseignant
 2. **Se connecter** : Utilisez `/` (page de login) pour vous connecter
 3. **Dashboard** : Après connexion, vous serez redirigé vers le dashboard
