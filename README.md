@@ -52,6 +52,24 @@ npm run dev
 ---
 
 ### Option 2 : Lancement sans Docker
+### 🔑 Configuration de l'environnement (`.env`)
+
+1. **Créer un fichier `.env` dans le dossier `Backend/`**  
+   À la racine du dossier `Backend`, créez un fichier nommé `.env` contenant au minimum :
+   ```
+   PORT=3000
+   MONGO_URI=VOTRE_URI_MONGODB_ATLAS
+   ```
+   > Remplacez `VOTRE_URI_MONGODB_ATLAS` par votre propre URI fourni par MongoDB Atlas.
+
+2. **Créer un cluster sur MongoDB Atlas**  
+   Si vous n'avez pas encore d'URI, créez un cluster gratuit sur [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) puis copiez votre URI de connexion pour l'utiliser dans le `.env`.
+
+3. **Adapter si besoin le code et la configuration docker :**
+   - Dans le fichier `Backend/src/config/db.ts`, remplacez la valeur de `MONGO_URI` par votre propre URI si elle est codée en dur.
+   - Si vous utilisez Docker, changez la variable d'environnement `MONGO_URI` directement dans `docker-compose.yml` pour pointer vers votre URI personnel Atlas au lieu de MongoDB local.
+
+---
 
 #### 1. Lancer le Backend
 
@@ -226,6 +244,7 @@ Le backend utilise les variables suivantes (définies dans `docker-compose.yml`)
 - `MONGO_URI` - URI de connexion MongoDB
 
 ---
+
 
 ## 📄 Licence
 
